@@ -42,28 +42,35 @@
 }
 
 /* Count */
+/*  JWK Original Count */
+/*  JWK top: -50px; */
+/*  JWK height: 40px; */
+/*  JWK width: 40px; */
+/*  JWK font-size: 0.8rem; */
+/*  JWK line-height: 40px; */
 .count {
   position: absolute;
-  top: -50px;
+  top: -45px;
   left: 20px;
-  font-size: 0.8rem;
+  font-size: 0.7rem;
   color: white;
   background: #27ae60;
   border-radius: 50%;
-  height: 40px;
-  width: 40px;
-  line-height: 40px;
+  height: 35px;
+  width: 35px;
+  line-height: 36px;
 }
 
 /* Count total */
+/*  JWK top: -22px; */
 .total {
   position: absolute;
   font-size: 0.8rem;
   width: 80px;
   text-align: center;
   left: 0;
-  top: -22px;
-  color: #bdc3c7;
+  top: -62px;
+  color: #177dc2;
 }
 
 /* Clap Icon */
