@@ -2,9 +2,10 @@ import React, { Component, useState } from 'react'
 import styles from './index.css'
 
 const initialState = {
-  count: 0,
+  count: 2,
   countTotal: 267,
-  isClicked: false
+  isClicked: false,
+  theClickedNeg: 3,
 }
 
 /**
@@ -25,8 +26,9 @@ const withClapAnimation = WrappedComponent => {
 
 const MediumClap = ({ animate }) => {
   const MAXIMUM_USER_CLAP = 50
+  const MAXIMUM_NEG_CLAP = -50
   const [clapState, setClapState] = useState(initialState)
-  const { count, countTotal, isClicked } = clapState
+  const { count, countTotal, isClicked,theClickedNeg } = clapState
 
   const handleClapClick = () => {
     animate()
@@ -36,7 +38,8 @@ const MediumClap = ({ animate }) => {
       countTotal:
         count < MAXIMUM_USER_CLAP
           ? prevState.countTotal + 1
-          : prevState.countTotal
+          : prevState.countTotal,
+          theClickedNeg: Math.min(theClickedNeg - 1, MAXIMUM_NEG_CLAP),
     }))
   }
 
@@ -45,6 +48,7 @@ const MediumClap = ({ animate }) => {
       <ClapIcon isClicked={isClicked} />
       <ClapCount count={count} />
       <CountTotal countTotal={countTotal} />
+      <CountNegative theClickedNeg={theClickedNeg} />
     </button>
   )
 }
@@ -74,6 +78,11 @@ const ClapCount = ({ count }) => {
 const CountTotal = ({ countTotal }) => {
   return <span className={styles.total}>{countTotal}</span>
 }
+
+const CountNegative = ({ theClickedNeg }) => {
+  return <span className={styles.totalneg}>{theClickedNeg}</span>
+}
+
 
 /**
  * Usage
