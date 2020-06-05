@@ -72,7 +72,7 @@ const StyledNavigation = styled.nav`
 const LogoArea = () => {
   return (
     <StyledLogoArea>
-      <Logo style={{ width: '43%' }} />
+      <Logo style={{ width: '93%' }} />
     </StyledLogoArea>
   )
 }

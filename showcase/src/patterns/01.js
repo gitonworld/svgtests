@@ -67,7 +67,7 @@ const ClapIcon = ({ isClicked }) => {
     </span>
   )
 }
-const ClapCount = ({ count }) => {
+const ClapCount = ({ count }) => { 
   return <span className={styles.count}>+ {count}</span>
 }
 
