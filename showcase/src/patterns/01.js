@@ -5,7 +5,7 @@ const initialState = {
   count: 2,
   countTotal: 267,
   isClicked: false,
-  theClickedNeg: 3,
+  theClickedNeg: -53,
 }
 
 /**
@@ -26,7 +26,7 @@ const withClapAnimation = WrappedComponent => {
 
 const MediumClap = ({ animate }) => {
   const MAXIMUM_USER_CLAP = 50
-  const MAXIMUM_NEG_CLAP = -50
+  const MAXIMUM_NEG_CLAP = -150
   const [clapState, setClapState] = useState(initialState)
   const { count, countTotal, isClicked,theClickedNeg } = clapState
 
@@ -39,7 +39,7 @@ const MediumClap = ({ animate }) => {
         count < MAXIMUM_USER_CLAP
           ? prevState.countTotal + 1
           : prevState.countTotal,
-          theClickedNeg: Math.min(theClickedNeg - 1, MAXIMUM_NEG_CLAP),
+      theClickedNeg: Math.max(theClickedNeg - 1, MAXIMUM_NEG_CLAP),
     }))
   }
 
