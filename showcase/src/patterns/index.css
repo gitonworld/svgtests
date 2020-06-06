@@ -26,7 +26,6 @@
 }
 .clap:hover:after {
   animation: myShock 1s ease-in infinite;
-  animation-iteration-count: 1;
   animation-play-state: paused;
 }
 
@@ -41,7 +40,6 @@
     opacity: 0;
     box-shadow: 0 0 30px #145b32, inset 0 0 30px #27ae60;
   }
-  
 }
 
 /* Count */
