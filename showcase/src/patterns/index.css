@@ -25,20 +25,23 @@
   transition: border-color 0.3s ease-in;
 }
 .clap:hover:after {
-  animation: shockwave 1s ease-in infinite;
+  animation: myShock 1s ease-in infinite;
+  animation-iteration-count: 1;
+  animation-play-state: paused;
 }
 
-@keyframes shockwave {
+@keyframes myShock {
   0% {
     transform: scale(1);
-    box-shadow: 0 0 2px #27ae60;
+    box-shadow: 0 0 14px #27ae60;
     opacity: 1;
   }
   100% {
     transform: scale(1);
     opacity: 0;
-    box-shadow: 0 0 50px #145b32, inset 0 0 10px #27ae60;
+    box-shadow: 0 0 30px #145b32, inset 0 0 30px #27ae60;
   }
+  
 }
 
 /* Count */
@@ -80,8 +83,8 @@
   font-size: 0.6rem;
   width: 80px;
   text-align: center;
-  left: 0;
-  top: -12px;
+  left: -2px;
+  top: -11px;
   color: #177dc2;
 }
 

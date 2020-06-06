@@ -5,7 +5,7 @@ const initialState = {
   count: 2,
   countTotal: 267,
   isClicked: false,
-  theClickedNeg: -53,
+  theClickedNeg: -50,
 }
 
 /**
@@ -25,8 +25,8 @@ const withClapAnimation = WrappedComponent => {
 }
 
 const MediumClap = ({ animate }) => {
-  const MAXIMUM_USER_CLAP = 50
-  const MAXIMUM_NEG_CLAP = -150
+  const MAXIMUM_USER_CLAP = 70
+  const MAXIMUM_NEG_CLAP = -70
   const [clapState, setClapState] = useState(initialState)
   const { count, countTotal, isClicked,theClickedNeg } = clapState
 
